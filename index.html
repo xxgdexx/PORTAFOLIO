@@ -63,8 +63,9 @@
                 <p class="category text-white">WEB Developer | Flutter Developer | Mobile IOS AND ANDROID | Front End
                   Developer | Innovation | API REST | AWS | FullStack Knwoledge | IBM Student Advocate</p><a
                   class="btn btn-primary smooth-scroll mr-2" href="#contact" data-aos="zoom-in"
-                  data-aos-anchor="data-aos-anchor">Hire Me</a><a class="btn btn-primary" href="https://drive.google.com/file/d/1ev8V4zqfnvN2D_lVqQMSTieTSv2jaJXZ/view?usp=sharing"  target="_blank" data-aos="zoom-in"
+                  data-aos-anchor="data-aos-anchor">Hire Me</a><a class="btn btn-primary"  href="https://mi-proyecto-d5778.web.app/login.html"  target="_blank" data-aos="zoom-in"
                   data-aos-anchor="data-aos-anchor">Download CV</a>
+                  <!-- href="https://drive.google.com/file/d/1ev8V4zqfnvN2D_lVqQMSTieTSv2jaJXZ/view?usp=sharing" -->
               </div>
             </div>
              <div class="section">
@@ -581,6 +582,7 @@
                       <div class="row">
                         <div class="col-md-6">
                           <div class="card-body">
+
                             <form action="https://formspree.io/f/xpzbzwek" method="POST">
                               <div class="p pb-3"><strong>Feel free to contact me </strong></div>
                               <div class="row mb-3">
@@ -624,6 +626,7 @@
                                 </div>
                               </div>
                             </form>
+
                           </div>
                         </div>
                         <div class="col-md-6">
@@ -664,7 +667,29 @@
     <script src="js/now-ui-kit.js?ver=1.1.0"></script>
     <script src="js/aos.js?ver=1.1.0"></script>
     <script src="scripts/main.js?ver=1.1.0"></script>
-</body>
+   
+   <script>
+    $form.addEventListener('submit', handleSubmit)
+
+    async function handleSubmit (event) {  
+      event.preventDefault()
+      const form = new FormData(this)
+      const response = await fetch(this.action, {
+        method: this.method,
+   
+        body: form,
+        headers: {
+          'Accept': 'application/json'
+        }
+      })
+     if (response.ok) {
+         this.reset ()
+        alert('Gracias por contactarme, te escribiré pronto')
+      }
+    }
+    </script>
+
+  </body>
 
 </html>
 
